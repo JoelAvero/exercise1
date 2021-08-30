@@ -1,197 +1,207 @@
 @import "/src/assets/css/colors.scss";
 
 body {
-    background-image: url("../../assets/images/bg-intro-desktop.png");
-    background-color: $primary-red;
-    @media (max-width: 376px) {
-        background-image: url("../../assets/images/bg-intro-mobile.png");
-        .content {
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            width: 100%;
-            position: absolute;
-            top: 0px;
-            .content-left {
-                width: 95%;
+  background-image: url("../../assets/images/bg-intro-desktop.png");
+  background-color: $primary-red;
+  @media (max-width: 376px) {
+    background-image: url("../../assets/images/bg-intro-mobile.png");
+    .content {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      position: absolute;
+      top: 0px;
+      .description-card {
+        width: 95%;
 
-                .left-div {
-                    h1{
-                        font-size: 29px;
-                        font-weight: 700;
-                        text-align: center;
-                        margin-top: 90px;
-                        line-height: 35px;
-                    }
-                    p {
-                        margin-bottom: 15px;
-                        text-align: center;
-                        font-weight: 500;
-                    }
-                }
-            }
-            .content-right {
-                width: 90%;
-                margin-top: 40px;
-                .try-it-free {
-                    padding: 20px;
-                    margin-bottom: 25px;
-                }
-                .register-input {
-                    padding: 18px;
-                }
-                .submit-button{
-                    padding: 18px;
-                }
-                .terms-and-services {
-                    width: 65%;
-                    text-align: center;
-                    font-size: 10px;
-                }
-            }
+        .description-card-container {
+          h1 {
+            font-size: 29px;
+            font-weight: 700;
+            text-align: center;
+            margin-top: 90px;
+            line-height: 35px;
+          }
+          p {
+            margin-bottom: 15px;
+            text-align: center;
+            font-weight: 500;
+          }
         }
+      }
+      .register-form-container {
+        width: 90%;
+        margin-top: 40px;
+
+        .try-it-free {
+          padding: 20px;
+          margin-bottom: 25px;
+        }
+
+        .register-input {
+          padding: 18px;
+        }
+
+        .submit-button {
+          padding: 18px;
+        }
+
+        .terms-and-services {
+          width: 65%;
+          text-align: center;
+          font-size: 10px;
+        }
+        
+        .error-icon{
+          top: 18px;
+        }
+      }
     }
+  }
 }
 
 .container {
-    height: 100vh;
-    
-    font-family: "Poppins";
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    
-    
+  height: 100vh;
+  font-family: "Poppins";
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .content {
-    display: flex;
-    justify-content: space-around;
-    width: 80%;
-
+  display: flex;
+  justify-content: space-around;
+  width: 80%;
 }
 
-.content-left {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    width: 50%;
-    color: white;
-    div {
-        padding: 0px 23px;
-        p {
-            font-size: 16px;
-            font-weight: 400;
-        }
-        h1 {
-            line-height: 42px;
-            margin-bottom: 25px;
-        }
+.description-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 50%;
+  color: white;
+  div {
+    padding: 0px 23px;
+    p {
+      font-size: 16px;
+      font-weight: 400;
     }
+    h1 {
+      line-height: 42px;
+      margin-bottom: 25px;
+    }
+  }
 }
 
-.content-right {
-    width: 46%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.register-form-container {
+  width: 46%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .try-it-free {
-    background-color: $accent-blue;
-    width: 100%;
-    border-radius: 10px;
-    padding: 13px;
-    font-size: 16px;
-    text-align: center;
-    border: none;
-    color: white;
-    box-sizing: border-box;
-    box-shadow: 0px 7px 0px 0px rgba(0, 0, 0, 0.2);
-    margin-bottom: 20px;
+  background-color: $accent-blue;
+  width: 100%;
+  border-radius: 10px;
+  padding: 13px;
+  font-size: 16px;
+  text-align: center;
+  border: none;
+  color: white;
+  box-sizing: border-box;
+  box-shadow: 0px 7px 0px 0px rgba(0, 0, 0, 0.2);
+  margin-bottom: 20px;
 }
 
 form {
-    background-color: white;
-    padding: 20px 0px;
-    width: 100%;
+  background-color: white;
+  padding: 20px 0px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  box-shadow: 0px 7px 0px 0px rgba(0, 0, 0, 0.2);
+  margin-bottom: 70px;
+
+  strong {
+    color: $primary-red;
+  }
+  .submit-button {
+    width: 85%;
+    padding: 13px;
+    border-radius: 5px;
+    margin: 16px 0px;
+    background-color: $primary-green;
+    border: none;
+    font-weight: 600;
+    box-shadow: 0px 4px 0px 0px #53ae86;
+    color: white;
+    text-transform: uppercase;
+  }
+
+  .input-container {
+    position: relative;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    border-radius: 10px;
-    box-shadow: 0px 7px 0px 0px rgba(0, 0, 0, 0.2);
-    margin-bottom: 70px;
-
-    strong {
-        color: $primary-red;
+    width: 85%;
+    margin: 8px 0px;
+    .register-input {
+      width: 100%;
+      padding: 13px;
+      border-radius: 5px;
+      margin: 2px 0px;
+      box-sizing: border-box;
     }
-    .submit-button {
-        width: 85%;
-        padding: 13px;
-        border-radius: 5px;
-        margin: 16px 0px;
-        background-color: $primary-green;
-        border: none;
-        font-weight: 600;
-        box-shadow: 0px 4px 0px 0px #53AE86;
-        color: white;
-        text-transform: uppercase;
-    }
-
-    .input-container {
-        position: relative;
-        display: flex;
-        flex-direction: column;
-        width: 85%;
-        margin: 8px 0px;
-        .register-input{
-            width: 100%;
-            padding: 13px;
-            border-radius: 5px;
-            margin: 2px 0px;
-            box-sizing: border-box;
-        }
-    }  
+  }
 }
 
 .error-icon {
-    background-image: url("../../assets/images/icon-error.svg");
-    background-repeat: no-repeat;
-    position: absolute;
-    top: 13px;
-    right: 20px;
-    width: 25px;
-    height: 25px;
-    display: flex;
+  background-image: url("../../assets/images/icon-error.svg");
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 13px;
+  right: 20px;
+  width: 25px;
+  height: 25px;
+  display: flex;
 }
 
 .error-text {
-    font-size: 11px;
-    color: $primary-red;
-    align-self: flex-end;
-    margin-top: 3px;
+  font-size: 11px;
+  color: $primary-red;
+  align-self: flex-end;
+  margin-top: 3px;
+  font-style: italic;
+  font-weight: 500;
 }
 
 .terms-and-services {
-    font-size: 10px;
-    color: $neutral-dark-blue;
-    margin-bottom: 10px;
-    width: 80%;
-    text-align: center;
+  font-size: 10px;
+  color: $neutral-dark-blue;
+  margin-bottom: 10px;
+  width: 80%;
+  text-align: center;
 }
 
 input {
-    border: 2.2px solid $neutral-grayish-blue;
-    font-weight: 600;
-    color: $neutral-dark-blue
+  border: 2.2px solid $neutral-grayish-blue;
+  font-weight: 600;
+  color: $neutral-dark-blue;
 }
+
 input:focus {
-    outline: none;
-    border: 2.2px solid $accent-blue;
+  outline: none;
+  border: 2.2px solid $accent-blue;
 }
 
 .error {
-    border-color: $primary-red;
+  border-color: $primary-red;
+}
+
+.submit-button:active {
+  background-color: #77e2b4;
 }
