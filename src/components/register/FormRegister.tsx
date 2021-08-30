@@ -127,7 +127,12 @@ const FormRegister = () => {
               : ""
           }`}
           name="email"
-          placeholder="Email Address"
+          placeholder={
+            invalidFlag &&
+            (isValidField.email === false || isValidField.email === null)
+              ? "email@example.com"
+              : "Email Address"
+          }
           onChange={handleInputChange}
         />
         {invalidFlag && !isValidField.email && (
