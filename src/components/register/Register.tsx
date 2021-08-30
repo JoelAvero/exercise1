@@ -1,3 +1,4 @@
+import FormRegister from "./FormRegister"
 import "./styles.scss"
 
 const Register = () => {
@@ -13,6 +14,7 @@ const Register = () => {
                 </div>
                 <div className="content-right">
                     <div className="try-it-free"><strong>Try it free 7 days</strong> then $20/mo. thereafter</div>
+                    <FormRegister />
                 </div>
             </div>
         </div>

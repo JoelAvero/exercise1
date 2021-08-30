@@ -41,19 +41,104 @@ body {
 }
 
 .content-right {
-    width: 50%;
-    background-color: red;
+    width: 46%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .try-it-free {
     background-color: $accent-blue;
     width: 100%;
     border-radius: 10px;
-    padding: 15px;
+    padding: 13px;
     font-size: 16px;
     text-align: center;
     border: none;
     color: white;
     box-sizing: border-box;
-    box-shadow: 0px 5px 0px 0px rgba(0, 0, 0, 0.2); 
+    box-shadow: 0px 7px 0px 0px rgba(0, 0, 0, 0.2);
+    margin-bottom: 20px;
+}
+
+form {
+    background-color: white;
+    padding: 20px 0px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    box-shadow: 0px 7px 0px 0px rgba(0, 0, 0, 0.2);
+
+    strong {
+        color: $primary-red;
+    }
+    .submit-button {
+        width: 85%;
+        padding: 13px;
+        border-radius: 5px;
+        margin: 16px 0px;
+
+        background-color: $primary-green;
+        border: none;
+        // border-bottom: 5px solid #53AE86;
+        box-shadow: 0px 4px 0px 0px #53AE86;
+
+        color: white;
+        text-transform: uppercase;
+    }
+
+    .input-container {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        width: 85%;
+        margin: 8px 0px;
+        .register-input{
+            width: 100%;
+            padding: 13px;
+            border-radius: 5px;
+            margin: 2px 0px;
+            box-sizing: border-box;
+        }
+    }  
+}
+
+.error-icon {
+    background-image: url("../../assets/images/icon-error.svg");
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 13px;
+    right: 20px;
+    width: 25px;
+    height: 25px;
+    display: flex;
+}
+
+.error-text {
+    font-size: 11px;
+    color: $primary-red;
+    align-self: flex-end;
+}
+
+.terms-and-services {
+    font-size: 9px;
+    color: $neutral-dark-blue;
+    margin-bottom: 10px;
+}
+
+input {
+    border: 2.2px solid $neutral-grayish-blue;
+    font-weight: 600;
+    color: $neutral-dark-blue
+}
+input:focus {
+    outline: none;
+    border: 2.2px solid $accent-blue;
+}
+
+.error {
+    border-color: $primary-red;
 }
