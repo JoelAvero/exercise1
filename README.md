@@ -2,9 +2,9 @@
 
 ## dependencies
 
-Node 14.17.5
-node-sass
-webfontloader
+- Node 14.17.5
+- node-sass
+- webfontloader
 
 ## commands
 
