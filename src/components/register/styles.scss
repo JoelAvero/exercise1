@@ -1,24 +1,75 @@
 @import "/src/assets/css/colors.scss";
 
 body {
-    
+    background-image: url("../../assets/images/bg-intro-desktop.png");
+    background-color: $primary-red;
+    @media (max-width: 376px) {
+        background-image: url("../../assets/images/bg-intro-mobile.png");
+        .content {
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            position: absolute;
+            top: 0px;
+            .content-left {
+                width: 95%;
 
+                .left-div {
+                    h1{
+                        font-size: 29px;
+                        font-weight: 700;
+                        text-align: center;
+                        margin-top: 90px;
+                        line-height: 35px;
+                    }
+                    p {
+                        margin-bottom: 15px;
+                        text-align: center;
+                        font-weight: 500;
+                    }
+                }
+            }
+            .content-right {
+                width: 90%;
+                margin-top: 40px;
+                .try-it-free {
+                    padding: 20px;
+                    margin-bottom: 25px;
+                }
+                .register-input {
+                    padding: 18px;
+                }
+                .submit-button{
+                    padding: 18px;
+                }
+                .terms-and-services {
+                    width: 65%;
+                    text-align: center;
+                    font-size: 10px;
+                }
+            }
+        }
+    }
 }
 
 .container {
     height: 100vh;
-    background-image: url("../../assets/images/bg-intro-desktop.png");
-    background-color: $primary-red;
+    
     font-family: "Poppins";
     display: flex;
     justify-content: center;
     align-items: center;
+
+    
+    
 }
 
 .content {
     display: flex;
     justify-content: space-around;
     width: 80%;
+
 }
 
 .content-left {
@@ -71,6 +122,7 @@ form {
     justify-content: center;
     border-radius: 10px;
     box-shadow: 0px 7px 0px 0px rgba(0, 0, 0, 0.2);
+    margin-bottom: 70px;
 
     strong {
         color: $primary-red;
@@ -80,12 +132,10 @@ form {
         padding: 13px;
         border-radius: 5px;
         margin: 16px 0px;
-
         background-color: $primary-green;
         border: none;
-        // border-bottom: 5px solid #53AE86;
+        font-weight: 600;
         box-shadow: 0px 4px 0px 0px #53AE86;
-
         color: white;
         text-transform: uppercase;
     }
@@ -121,12 +171,15 @@ form {
     font-size: 11px;
     color: $primary-red;
     align-self: flex-end;
+    margin-top: 3px;
 }
 
 .terms-and-services {
-    font-size: 9px;
+    font-size: 10px;
     color: $neutral-dark-blue;
     margin-bottom: 10px;
+    width: 80%;
+    text-align: center;
 }
 
 input {
