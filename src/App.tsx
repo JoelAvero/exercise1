@@ -1,9 +1,10 @@
 import './App.scss';
+import Register from './components/register/Register';
 
 function App() {
   return (
     <div>
-      <h1>It Works!</h1>
+      <Register />
     </div>
   );
 }
